@@ -46,11 +46,8 @@ $.ajax({
   url: queryURL,
   method: "GET",
 }).then(function (response) {
-  console.log(queryURL);
-  console.log(response);
   
-  //need to generate the date
-  $(".city-place").text(citySearched);
+ // $(".city-place").text(citySearched);
   $(".city-date").text(currentDateAndTime);
   $(".city-temp").text("Temperature: " + response.main.temp);
   $(".city-humidity").text("Humidity: " + response.main.humidity);
@@ -66,14 +63,39 @@ $.ajax({
 
 //five day forcast=========================
 var citySearched = "";
-//var fiveDayURL = "http://api.openweathermap.org/data/2.5/forecast?q="+ citySearched +"&appid=c7c8128e2f798fa71501452132a9cc27"
-var queryURL ="https://api.openweathermap.org/data/2.5/weather?q=charlotte&appid=c7c8128e2f798fa71501452132a9cc27";
+//var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q="+ citySearched +"&appid=c7c8128e2f798fa71501452132a9cc27
+var queryURL ="https://api.openweathermap.org/data/2.5/forecast?q=charlotte&appid=c7c8128e2f798fa71501452132a9cc27";
 
 $.ajax({
   url: queryURL,
   method: "GET",
 }).then(function (response) {
+console.log(response);
 
+  $(".card-day-one").text(currentDateAndTime);
+  //$(".card-icon-one").attr("img")
+  $(".card-temp-one").text("Temp: " + response.list[0].main.temp);
+  $(".card-humidity-one").text("Humidity: " + response.list[0].main.humidity);
+
+  $(".card-day-two").text(currentDateAndTime);
+  //$(".card-icon-two").attr("img")
+  $(".card-temp-two").text("Temp: " + response.list[1].main.temp);
+  $(".card-humidity-two").text("Humidity: " + response.list[1].main.humidity);
+
+  $(".card-day-three").text(currentDateAndTime);
+  //$(".card-icon-three").attr("img")
+  $(".card-temp-three").text("Temp: " + response.list[2].main.temp);
+  $(".card-humidity-three").text("Humidity: " + response.list[2].main.humidity);
+
+  $(".card-day-four").text(currentDateAndTime);
+  //$(".card-icon-four").attr("img")
+  $(".card-temp-four").text("Temp: " + response.list[3].main.temp);
+  $(".card-humidity-four").text("Humidity: " + response.list[3].main.humidity);
+
+  $(".card-day-five").text(currentDateAndTime);
+  //$(".card-icon-five").attr("img")
+  $(".card-temp-five").text("Temp: " + response.list[4].main.temp);
+  $(".card-humidity-five").text("Humidity: " + response.list[4].main.humidity);
 
 
 });
