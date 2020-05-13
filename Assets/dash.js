@@ -1,5 +1,6 @@
 //console.log("link")
-
+$(document).ready(function(){
+    console.log("link") 
 //search bar========================
 
 var searchBar = JSON.parse(localStorage.getItem("searches")) || [];
@@ -12,3 +13,24 @@ var searchBar = JSON.parse(localStorage.getItem("searches")) || [];
 
         }
     }
+
+    $("#search-bar").on("submit",function(event) {
+        event.preventDefault();
+
+        var city = $("#city").val().trim();
+        searchBar.push(city);
+
+        localStorage.setItem("searchBar", JSON.stringify(searchBar));
+
+        $("#city").val("");
+
+        renderHistory();
+    });
+
+    $(document).on("click", ".city", function(){
+        console.log($(this).text());
+    })
+
+    renderHistory();
+
+})
