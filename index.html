@@ -19,24 +19,31 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
+  <!--Body-->
   <body>
+    <main class="page-container">
+      
     <!--header/Jumbotron-->
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid" style="background-color: aquamarine;">
       <div class="container">
         <h1 class="display-4 text-center">Weather Dashboard</h1>
       </div>
     </div>
-
+<div class= "row">
+  <div class="col-md-4">
     <!--searchBar/sidebar-->
-    <div class="sidebar">
+    <div class="sidebar" style="margin-left:40px;">
       <form id="search-bar">
         <h3>Search for a City:</h3>
         <input type="text" name="city" id="city" />
-        <button type="sumbit">Search</button>
+        <button type="submit">Search</button>
       </form>
-      <div id="history"></div>
+      <div id="history">
+      </div>
     </div>
-
+  </div>
+  <div class="col-md-8">
     <!--City, date, temp, humidity, wind speed, UV index-->
     <div class="card bg-light" style="width: 18rem;">
         <div class="card-body">
@@ -46,14 +53,20 @@
           <p class="city-humidity"></p>
           <p class="city-wind"></p>
           <p class="city-index"></p>
-          
+         </div> 
         </div>
       </div>
-
+</div>
+<br>
+<br>
+<br>
+<div class="containter" style="margin-left: 450px; margin-right: 250px">
+<div class="row">
+  <h3>5 Day Forecast</h3>
       <!--5 day forecast-->
       <div class="card-group">
         <div class="card">
-          <img src="..." class="card-img-top" alt="...">
+          <!--img src="..." class="card-img-top" alt="..."-->
           <div class="card-body">
             <h5 class="card-day-one">Date</h5>
             <p class="card-icon-one">This is where the icon goes</p>
@@ -62,7 +75,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="..." class="card-img-top" alt="...">
+          <!--img src="..." class="card-img-top" alt="..."-->
           <div class="card-body">
             <h5 class="card-day-two">Date</h5>
             <p class="card-icon-two">This is where the icon goes</p>
@@ -71,7 +84,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="..." class="card-img-top" alt="...">
+          <!--img src="..." class="card-img-top" alt="..."-->
           <div class="card-body">
             <h5 class="card-day-three">Date</h5>
             <p class="card-icon-three">This is where the icon goes</p>
@@ -80,7 +93,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="..." class="card-img-top" alt="...">
+          <!--img src="..." class="card-img-top" alt="..."-->
           <div class="card-body">
             <h5 class="card-day-four">Date</h5>
             <p class="card-icon-four">This is where the icon goes</p>
@@ -89,7 +102,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="..." class="card-img-top" alt="...">
+          <!--img src="..." class="card-img-top" alt="..."-->
           <div class="card-body">
             <h5 class="card-day-five">Date</h5>
             <p class="card-icon-five">This is where the icon goes</p>
@@ -98,8 +111,9 @@
           </div>
         </div>
       </div>
-      
-
+      </div>
+     </div> 
+</main>
       
     <!--js file link-->
     <script src="./Assets/dash.js"></script>
