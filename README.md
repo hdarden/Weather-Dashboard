@@ -12,4 +12,4 @@ For the five day weather forecast the date, temp, and humidity is displayed.
 https://hdarden.github.io/Weather-Dashboard/
 
 # Screenshot
-
+https://github.com/hdarden/Weather-Dashboard/issues/1#issue-617869320
