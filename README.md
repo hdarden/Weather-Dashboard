@@ -7,7 +7,6 @@ The date temperature, humidity, and windspeed is displayed for the current weath
 
 For the five day weather forecast the date, temp, and humidity is displayed.
 
-*** I had a hard time getting the icons and UV index to show up in my browser which is why it is commented out in my code.
 
 # Link
 https://hdarden.github.io/Weather-Dashboard/
